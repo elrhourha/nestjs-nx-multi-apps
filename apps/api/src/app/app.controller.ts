@@ -1,7 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 
 import { AppService } from './app.service';
-import {commonsEntities} from "commons-entities";
+import { commonsEntities } from 'commons-entities';
 
 @Controller()
 export class AppController {
@@ -9,6 +9,6 @@ export class AppController {
 
   @Get()
   getData() {
-    return commonsEntities()
+    return commonsEntities();
   }
 }

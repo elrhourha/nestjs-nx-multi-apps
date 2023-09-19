@@ -1,8 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 
 import { AppService } from './app.service';
-import axios from "axios";
-import * as process from "process";
+import axios from 'axios';
+import * as process from 'process';
 
 @Controller()
 export class AppController {
@@ -11,7 +11,7 @@ export class AppController {
   @Get()
   async getData() {
     const response = await axios.get(process.env.MICRO_SERVICE2);
-    console.log(`Response from MS2:`, response.data)
+    console.log(`Response from MS2:`, response.data);
     return this.appService.getData();
   }
 }
